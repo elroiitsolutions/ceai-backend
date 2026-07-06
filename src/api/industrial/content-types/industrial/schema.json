@@ -1,0 +1,56 @@
+{
+  "kind": "collectionType",
+  "collectionName": "industrials",
+  "info": {
+    "singularName": "industrial",
+    "pluralName": "industrials",
+    "displayName": "Industrial"
+  },
+  "pluginOptions": {
+    "i18n": {
+      "localized": true
+    }
+  },
+  "attributes": {
+    "title": {
+      "type": "string",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "content": {
+      "type": "richtext",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "coverImage": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "title"
+    },
+    "region": {
+      "type": "string"
+    },
+    "keyAdvantages": {
+      "type": "component",
+      "repeatable": true,
+      "component": "shared.feature-item"
+    },
+    "exclusiveIncentives": {
+      "type": "component",
+      "repeatable": true,
+      "component": "shared.feature-item"
+    }
+  }
+}

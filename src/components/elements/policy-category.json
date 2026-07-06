@@ -1,0 +1,21 @@
+{
+  "collectionName": "components_elements_policy_categories",
+  "info": {
+    "displayName": "policy-category",
+    "icon": "folder",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "icon": {
+      "type": "string"
+    },
+    "content": {
+      "type": "richtext"
+    }
+  }
+}

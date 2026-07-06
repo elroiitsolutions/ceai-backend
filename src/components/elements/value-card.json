@@ -1,0 +1,22 @@
+{
+  "collectionName": "components_elements_value_cards",
+  "info": {
+    "displayName": "value-card",
+    "icon": "heart",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "icon": {
+      "type": "string",
+      "required": true
+    },
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "description": {
+      "type": "text"
+    }
+  }
+}

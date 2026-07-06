@@ -1,0 +1,26 @@
+{
+  "collectionName": "components_shared_policy_regulations",
+  "info": {
+    "displayName": "Policy Regulation",
+    "description": "Latest policies and regulations"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "date": {
+      "type": "string"
+    },
+    "description": {
+      "type": "richtext"
+    },
+    "tag": {
+      "type": "string"
+    },
+    "icon": {
+      "type": "string"
+    }
+  }
+}

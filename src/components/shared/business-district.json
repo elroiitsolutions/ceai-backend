@@ -1,0 +1,20 @@
+{
+  "collectionName": "components_shared_business_districts",
+  "info": {
+    "displayName": "Business District",
+    "description": "Information about a key business district in a city."
+  },
+  "options": {},
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "description": {
+      "type": "text"
+    },
+    "companiesCount": {
+      "type": "string"
+    }
+  }
+}

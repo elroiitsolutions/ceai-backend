@@ -1,0 +1,50 @@
+{
+  "kind": "singleType",
+  "collectionName": "home",
+  "info": {
+    "singularName": "home",
+    "pluralName": "homes",
+    "displayName": "Home",
+    "description": "The home page of the website"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {
+    "i18n": {
+      "localized": true
+    }
+  },
+  "attributes": {
+    "seoMeta": {
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.seo",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "contentBlocks": {
+      "type": "dynamiczone",
+      "components": [
+        "sections.hero",
+        "sections.text-block",
+        "sections.image-block",
+        "sections.feature-grid",
+        "sections.statistics",
+        "sections.cta",
+        "sections.faq",
+        "sections.industries-tabs",
+        "sections.map",
+        "sections.form"
+      ],
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    }
+  }
+}

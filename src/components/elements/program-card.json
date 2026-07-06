@@ -1,0 +1,32 @@
+{
+  "collectionName": "components_elements_program_cards",
+  "info": {
+    "displayName": "program-card",
+    "icon": "picture",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "description": {
+      "type": "text"
+    },
+    "image": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "date": {
+      "type": "date"
+    },
+    "link": {
+      "type": "string"
+    }
+  }
+}

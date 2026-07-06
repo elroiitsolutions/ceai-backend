@@ -1,0 +1,25 @@
+{
+  "collectionName": "components_sections_events_lists",
+  "info": {
+    "displayName": "events-list",
+    "icon": "calendar",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "badge": {
+      "type": "string"
+    },
+    "title": {
+      "type": "string"
+    },
+    "limit": {
+      "type": "integer",
+      "default": 3
+    },
+    "showUpcomingOnly": {
+      "type": "boolean",
+      "default": true
+    }
+  }
+}

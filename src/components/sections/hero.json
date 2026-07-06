@@ -1,0 +1,58 @@
+{
+  "collectionName": "components_sections_heroes",
+  "info": {
+    "displayName": "hero",
+    "icon": "star",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "badge": {
+      "type": "string"
+    },
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "subtitle": {
+      "type": "text"
+    },
+    "backgroundImage": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "backgroundVideo": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "videos"
+      ]
+    },
+    "primaryButton": {
+      "type": "component",
+      "repeatable": false,
+      "component": "elements.button"
+    },
+    "secondaryButton": {
+      "type": "component",
+      "repeatable": false,
+      "component": "elements.button"
+    },
+    "checklist": {
+      "type": "json"
+    },
+    "theme": {
+      "type": "enumeration",
+      "enum": [
+        "dark",
+        "light"
+      ],
+      "default": "dark"
+    }
+  }
+}

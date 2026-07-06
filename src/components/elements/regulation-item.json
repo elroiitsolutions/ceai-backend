@@ -1,0 +1,21 @@
+{
+  "collectionName": "components_elements_regulation_items",
+  "info": {
+    "displayName": "regulation-item",
+    "icon": "book",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "content": {
+      "type": "richtext"
+    },
+    "reference": {
+      "type": "string"
+    }
+  }
+}

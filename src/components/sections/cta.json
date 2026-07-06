@@ -1,0 +1,46 @@
+{
+  "collectionName": "components_sections_ctas",
+  "info": {
+    "displayName": "cta",
+    "icon": "cursor",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "headline": {
+      "type": "string",
+      "required": true
+    },
+    "description": {
+      "type": "text"
+    },
+    "primaryButton": {
+      "type": "component",
+      "repeatable": false,
+      "component": "elements.button"
+    },
+    "secondaryButton": {
+      "type": "component",
+      "repeatable": false,
+      "component": "elements.button"
+    },
+    "backgroundImage": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "theme": {
+      "type": "enumeration",
+      "enum": [
+        "blue",
+        "red",
+        "dark",
+        "light"
+      ],
+      "default": "blue"
+    }
+  }
+}

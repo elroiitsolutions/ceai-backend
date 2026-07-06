@@ -1,0 +1,64 @@
+{
+  "kind": "collectionType",
+  "collectionName": "city_pages",
+  "info": {
+    "singularName": "city-page",
+    "pluralName": "city-pages",
+    "displayName": "City Page"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {
+    "i18n": {
+      "localized": true
+    }
+  },
+  "attributes": {
+    "cityName": {
+      "type": "string",
+      "required": true
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "cityName",
+      "required": true
+    },
+    "subtitle": {
+      "type": "text",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "businessDistricts": {
+      "type": "component",
+      "repeatable": true,
+      "component": "shared.business-district"
+    },
+    "latestPolicies": {
+      "type": "component",
+      "repeatable": true,
+      "component": "shared.policy-regulation"
+    },
+    "contactInfo": {
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.contact-info"
+    },
+    "keyAdvantages": {
+      "type": "component",
+      "repeatable": true,
+      "component": "shared.feature-item"
+    },
+    "headerImage": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
+      "allowedTypes": [
+        "images"
+      ]
+    }
+  }
+}

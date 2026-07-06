@@ -1,0 +1,24 @@
+{
+  "collectionName": "components_elements_process_steps",
+  "info": {
+    "displayName": "process-step",
+    "icon": "check",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "stepNumber": {
+      "type": "integer"
+    },
+    "icon": {
+      "type": "string"
+    },
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "description": {
+      "type": "text"
+    }
+  }
+}

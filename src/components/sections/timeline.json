@@ -1,0 +1,27 @@
+{
+  "collectionName": "components_sections_timelines",
+  "info": {
+    "displayName": "timeline",
+    "icon": "clock",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "direction": {
+      "type": "enumeration",
+      "enum": [
+        "vertical",
+        "horizontal"
+      ],
+      "default": "vertical"
+    },
+    "items": {
+      "type": "component",
+      "repeatable": true,
+      "component": "elements.timeline-item"
+    }
+  }
+}
