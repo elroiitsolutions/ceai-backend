@@ -1392,7 +1392,7 @@ export interface ApiSeoSeo extends Struct.SingleTypeSchema {
 export interface ApiTeamMemberTeamMember extends Struct.CollectionTypeSchema {
   collectionName: 'team_members';
   info: {
-    description: 'CEAI Team Members and Leadership';
+    description: 'CEA Team Members and Leadership';
     displayName: 'Team Member';
     pluralName: 'team-members';
     singularName: 'team-member';

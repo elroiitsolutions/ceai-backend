@@ -1,6 +1,4 @@
-import type { Core } from '@strapi/strapi';
-
-const config = ({ env }: Core.Config.Shared.ConfigParams): Core.Config.Admin => ({
+const config = ({ env }) => ({
   auth: {
     secret: env('ADMIN_JWT_SECRET'),
   },
@@ -24,12 +22,12 @@ const config = ({ env }: Core.Config.Shared.ConfigParams): Core.Config.Admin => 
     enabled: true,
     config: {
       allowedOrigins: [env('CLIENT_URL', 'http://localhost:3000')],
-      async handler(uid: string, { documentId, locale, status }: { documentId: string, locale: string, status: string }) {
-        const document = await strapi.documents(uid as any).findOne({ documentId, locale, status: status as 'draft' | 'published' });
+      async handler(uid, { documentId, locale, status }) {
+        const document = await strapi.documents(uid).findOne({ documentId, locale, status });
         const secret = env('PREVIEW_SECRET', 'my-preview-secret');
         const urlSearchParams = new URLSearchParams({
           secret,
-          slug: (document as any)?.slug || '',
+          slug: document?.slug || '',
           locale: locale || 'en',
           type: uid.split('.')[1] || '' // Extract content type name (e.g. api::home.home -> home)
         });

@@ -28,7 +28,7 @@ export default {
     ];
 
     // Build the array of permission action strings
-    const permissions: { action: string; }[] = [];
+    const permissions = [];
     for (const uid of publicActions) {
       permissions.push({ action: `${uid}.find` });
       permissions.push({ action: `${uid}.findOne` });

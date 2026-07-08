@@ -1,7 +1,10 @@
 import path from 'path';
-import type { Core } from '@strapi/strapi';
+import { fileURLToPath } from 'url';
 
-const config = ({ env }: Core.Config.Shared.ConfigParams): Core.Config.Database => {
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+
+const config = ({ env }) => {
   const client = env('DATABASE_CLIENT', 'sqlite');
 
   const connections = {
