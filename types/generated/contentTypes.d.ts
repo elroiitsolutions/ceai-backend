@@ -522,6 +522,24 @@ export interface ApiContactContact extends Struct.SingleTypeSchema {
         };
       }>;
     headerImage: Schema.Attribute.Media<'images', true>;
+    indiaAddress: Schema.Attribute.Text &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    indiaEmail: Schema.Attribute.Email &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    indiaPhone: Schema.Attribute.String &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
     locale: Schema.Attribute.String;
     localizations: Schema.Attribute.Relation<
       'oneToMany',
@@ -600,6 +618,81 @@ export interface ApiCultureCulture extends Struct.SingleTypeSchema {
         };
       }>;
     seoMeta: Schema.Attribute.Component<'shared.seo', false> &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    subtitle: Schema.Attribute.Text &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    title: Schema.Attribute.String &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
+export interface ApiEsgEsg extends Struct.SingleTypeSchema {
+  collectionName: 'esgs';
+  info: {
+    description: 'ESG and corporate responsibility section page';
+    displayName: 'ESG Page';
+    pluralName: 'esgs';
+    singularName: 'esg';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  pluginOptions: {
+    i18n: {
+      localized: true;
+    };
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    environmentalImage: Schema.Attribute.Media<'images', true>;
+    environmentalText: Schema.Attribute.RichText &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    governanceImage: Schema.Attribute.Media<'images', true>;
+    governanceText: Schema.Attribute.RichText &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    headerImage: Schema.Attribute.Media<'images', true>;
+    locale: Schema.Attribute.String;
+    localizations: Schema.Attribute.Relation<'oneToMany', 'api::esg.esg'>;
+    publishedAt: Schema.Attribute.DateTime;
+    responsibleList: Schema.Attribute.Component<'shared.feature-item', true> &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    seoMeta: Schema.Attribute.Component<'shared.seo', false> &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    socialImage: Schema.Attribute.Media<'images', true>;
+    socialText: Schema.Attribute.RichText &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
           localized: true;
@@ -2112,6 +2205,7 @@ declare module '@strapi/strapi' {
       'api::city-page.city-page': ApiCityPageCityPage;
       'api::contact.contact': ApiContactContact;
       'api::culture.culture': ApiCultureCulture;
+      'api::esg.esg': ApiEsgEsg;
       'api::event.event': ApiEventEvent;
       'api::footer.footer': ApiFooterFooter;
       'api::global.global': ApiGlobalGlobal;
